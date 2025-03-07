@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Guides - TravelEase</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>TravelEase</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hotels.html">Hotels</a></li>
+                    <li><a href="cabs.html">Cabs</a></li>
+                    <li><a href="guides.html" class="active">Tour Guides</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Find a Tour Guide</h1>
+            <p>Discover experienced guides to enhance your travel experience</p>
+        </div>
+    </section>
+
+    <section class="guides-section">
+        <div class="container">
+            <div class="guides-grid">
+                <div class="filters-sidebar">
+                    <div class="filter-card">
+                        <h3>Filters</h3>
+                        <form id="guide-filter-form">
+                            <div class="filter-group">
+                                <label for="guide-search">Search</label>
+                                <div class="search-input">
+                                    <i class="fas fa-search"></i>
+                                    <input type="text" id="guide-search" name="search" placeholder="Search guides or specialties">
+                                </div>
+                            </div>
+                            <div class="filter-group">
+                                <label for="guide-location">Location</label>
+                                <select id="guide-location" name="location">
+                                    <option value="">All locations</option>
+                                    <option value="Bali">Bali, Indonesia</option>
+                                    <option value="Barcelona">Barcelona, Spain</option>
+                                    <option value="Tokyo">Tokyo, Japan</option>
+                                    <option value="Paris">Paris, France</option>
+                                    <option value="Cairo">Cairo, Egypt</option>
+                                    <option value="New York">New York, USA</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label for="guide-date">Date</label>
+                                <div class="date-input">
+                                    <i class="far fa-calendar"></i>
+                                    <input type="date" id="guide-date" name="date">
+                                </div>
+                            </div>
+                            <div class="filter-group">
+                                <label for="guide-language">Language</label>
+                                <select id="guide-language" name="language">
+                                    <option value="">Any language</option>
+                                    <option value="English">English</option>
+                                    <option value="Spanish">Spanish</option>
+                                    <option value="French">French</option>
+                                    <option value="Japanese">Japanese</option>
+                                    <option value="Arabic">Arabic</option>
+                                    <option value="German">German</option>
+                                    <option value="Mandarin">Mandarin</option>
+                                    <option value="Indonesian">Indonesian</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Apply Filters</button>
+                            <button type="reset" class="btn btn-outline">Reset Filters</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="guides-list" id="guides-container">
+                    <!-- Guide cards will be loaded here via JavaScript -->
+                    <div class="loading">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Loading tour guides...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <h2>TravelEase</h2>
+                    </div>
+                    <p>Making travel planning simple and enjoyable with our comprehensive booking services.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="hotels.html">Hotels</a></li>
+                        <li><a href="cabs.html">Cabs</a></li>
+                        <li><a href="guides.html">Tour Guides</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Subscribe</h3>
+                    <p>Subscribe to our newsletter for travel tips and exclusive offers.</p>
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TravelEase. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/guides.js"></script>
+</body>
+</html>
