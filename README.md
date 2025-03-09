@@ -20,8 +20,8 @@ Create a `.env` file in the root directory with the following variables:
 ```
 MONGODB_URI=mongodb://localhost:27017/travelease
 JWT_SECRET=your_jwt_secret_key_here
-PORT=5000
-NEXT_PUBLIC_API_URL=http://localhost:5000/api
+PORT=5001
+NEXT_PUBLIC_API_URL=http://localhost:5001/api
 ```
 
 4. Seed the database
