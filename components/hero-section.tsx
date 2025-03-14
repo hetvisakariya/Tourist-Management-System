@@ -46,7 +46,7 @@ export function HeroSection() {
       >
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Discover the World with TravelEase
+            Discover the World with Tourist Guide
           </h1>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
             Book hotels, cabs, and tour guides for your perfect vacation experience

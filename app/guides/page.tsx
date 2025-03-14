@@ -179,7 +179,7 @@ export default function GuidesPage() {
                         <SelectValue placeholder="All locations" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="">All locations</SelectItem>
+                        <SelectItem value="all">All locations</SelectItem>
                         <SelectItem value="Bali">Bali, Indonesia</SelectItem>
                         <SelectItem value="Barcelona">Barcelona, Spain</SelectItem>
                         <SelectItem value="Tokyo">Tokyo, Japan</SelectItem>
@@ -221,7 +221,7 @@ export default function GuidesPage() {
                         <SelectValue placeholder="Any language" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="">Any language</SelectItem>
+                        <SelectItem value="any">Any language</SelectItem>
                         <SelectItem value="English">English</SelectItem>
                         <SelectItem value="Spanish">Spanish</SelectItem>
                         <SelectItem value="French">French</SelectItem>

@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { HeroSection } from "@/components/hero-section";
 import { FeaturedDestinations } from "@/components/featured-destinations";
@@ -15,7 +17,7 @@ export default function Home() {
       <FeaturedDestinations />
       <Testimonials />
       <Footer />
-      {/*  */}
+      
     </main>
   );
 }

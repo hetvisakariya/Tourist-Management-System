@@ -9,7 +9,7 @@ export function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-1">
-            <h3 className="text-xl font-bold mb-4">TravelEase</h3>
+            <h3 className="text-xl font-bold mb-4">Tourist Guide</h3>
             <p className="text-muted-foreground mb-4">
               Making travel planning simple and enjoyable with our comprehensive booking services.
             </p>
@@ -115,7 +115,7 @@ export function Footer() {
         </div>
         
         <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} TravelEase. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Tourist Guide. All rights reserved.</p>
         </div>
       </div>
     </footer>

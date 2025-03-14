@@ -67,7 +67,7 @@ export default function AboutPage() {
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4">About TravelEase</h1>
+          <h1 className="text-4xl font-bold mb-4">About Tourist Guide</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             We're on a mission to make travel planning simple, enjoyable, and accessible for everyone.
           </p>
@@ -78,13 +78,13 @@ export default function AboutPage() {
           <div>
             <h2 className="text-3xl font-bold mb-4">Our Story</h2>
             <p className="text-muted-foreground mb-4">
-              TravelEase was founded in 2020 with a simple idea: travel planning should be easy and stress-free. 
+              Tourist Guide was founded in 2020 with a simple idea: travel planning should be easy and stress-free. 
               What started as a small startup has grown into a comprehensive platform serving thousands of travelers worldwide.
             </p>
             <p className="text-muted-foreground mb-4">
               Our founder, Sarah Johnson, experienced firsthand the challenges of coordinating travel arrangements 
               during a backpacking trip across Southeast Asia. Determined to solve this problem, she assembled a 
-              team of travel enthusiasts and tech experts to create TravelEase.
+              team of travel enthusiasts and tech experts to create Tourist Guide.
             </p>
             <p className="text-muted-foreground">
               Today, we offer seamless booking services for hotels, cabs, and tour guides, all in one platform. 
@@ -94,7 +94,7 @@ export default function AboutPage() {
           <div className="relative h-[400px] rounded-lg overflow-hidden">
             <Image
               src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1744&q=80"
-              alt="TravelEase team"
+              alt="Tourist Guide team"
               fill
               style={{ objectFit: "cover" }}
             />

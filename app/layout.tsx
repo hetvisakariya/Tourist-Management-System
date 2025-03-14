@@ -8,7 +8,7 @@ import { AuthProvider } from '@/hooks/use-auth';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'TravelEase - Tourist Management',
+  title: 'Tourist Guide - Tourist Management',
   description: 'Book hotels, cabs, and tour guides for your perfect vacation',
 };
 

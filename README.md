@@ -6,8 +6,8 @@
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/travelease.git
-cd travelease
+git clone https://github.com/yourusername/Tourist Guide.git
+cd Tourist Guide
 ```
 
 2. Install dependencies
@@ -18,7 +18,7 @@ npm install
 3. Set up environment variables
 Create a `.env` file in the root directory with the following variables:
 ```
-MONGODB_URI=mongodb://localhost:27017/travelease
+MONGODB_URI=mongodb://localhost:27017/Tourist Guide
 JWT_SECRET=your_jwt_secret_key_here
 PORT=5001
 NEXT_PUBLIC_API_URL=http://localhost:5001/api
@@ -45,11 +45,11 @@ npm run dev
 After seeding the database, you can use the following credentials to log in:
 
 **Admin User:**
-- Email: admin@travelease.com
+- Email: admin@Tourist Guide.com
 - Password: admin123
 
 **Regular User:**
-- Email: user@travelease.com
+- Email: user@Tourist Guide.com
 - Password: user123
 
 ## API Endpoints
@@ -101,7 +101,7 @@ After seeding the database, you can use the following credentials to log in:
 ## Project Structure
 
 ```
-travelease/
+Tourist Guide/
 ├── app/                  # Next.js app directory
 │   ├── about/            # About page
 │   ├── auth/             # Authentication pages

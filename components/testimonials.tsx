@@ -10,7 +10,7 @@ export function Testimonials() {
       location: "New York, USA",
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
       rating: 5,
-      text: "TravelEase made our family vacation to Bali absolutely seamless. The hotel recommendations were spot on, and the tour guide they arranged for us was knowledgeable and friendly. Will definitely use their services again!"
+      text: "Tourist Guide made our family vacation to Bali absolutely seamless. The hotel recommendations were spot on, and the tour guide they arranged for us was knowledgeable and friendly. Will definitely use their services again!"
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ export function Testimonials() {
       location: "Barcelona, Spain",
       image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1361&q=80",
       rating: 5,
-      text: "I've used many travel platforms before, but TravelEase stands out for its user-friendly interface and excellent customer service. When our flight was delayed, they quickly rearranged our hotel and cab bookings without any hassle."
+      text: "I've used many travel platforms before, but Tourist Guide stands out for its user-friendly interface and excellent customer service. When our flight was delayed, they quickly rearranged our hotel and cab bookings without any hassle."
     }
   ];
 

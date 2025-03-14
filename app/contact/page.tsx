@@ -73,7 +73,7 @@ export default function ContactPage() {
                   <Mail className="h-5 w-5 mr-3 mt-0.5 text-primary" />
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-muted-foreground">support@travelease.com</p>
+                    <p className="text-muted-foreground">support@Tourist Guide.com</p>
                   </div>
                 </div>
                 

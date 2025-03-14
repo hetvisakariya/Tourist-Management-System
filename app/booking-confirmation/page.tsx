@@ -33,7 +33,7 @@ export default function BookingConfirmationPage() {
               </div>
               <CardTitle className="text-3xl">Booking Confirmed!</CardTitle>
               <CardDescription className="text-lg">
-                Your booking has been successfully confirmed. Thank you for choosing TravelEase!
+                Your booking has been successfully confirmed. Thank you for choosing Tourist Guide!
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -88,7 +88,7 @@ export default function BookingConfirmationPage() {
                 <Mail className="h-5 w-5 mr-2 mt-0.5 text-primary" />
                 <div>
                   <p className="font-medium">Need Help?</p>
-                  <p className="text-muted-foreground">If you have any questions about your booking, please contact our customer support at support@travelease.com or call us at +1-800-TRAVEL.</p>
+                  <p className="text-muted-foreground">If you have any questions about your booking, please contact our customer support at support@Tourist Guide.com or call us at +1-800-TRAVEL.</p>
                 </div>
               </div>
             </CardContent>

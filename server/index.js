@@ -16,7 +16,7 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/travelease')
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/Tourist Guide')
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('Could not connect to MongoDB', err));
 
@@ -29,7 +29,7 @@ app.use('/api/bookings', bookingRoutes);
 
 // Root route
 app.get('/', (req, res) => {
-  res.send('TravelEase API is running');
+  res.send('Tourist Guide API is running');
 });
 
 // Start server

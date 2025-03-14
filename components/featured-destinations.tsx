@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -101,7 +101,7 @@ export function FeaturedDestinations() {
                 </div>
               </CardContent>
               <CardFooter className="p-6 pt-0">
-                <Link href={`/destinations/${destination.id}`} className="w-full">
+                <Link to={`/destinations/${destination.id}`} className="w-full">
                   <Button variant="outline" className="w-full">
                     Explore
                   </Button>
@@ -112,7 +112,7 @@ export function FeaturedDestinations() {
         </div>
         
         <div className="text-center mt-10">
-          <Link href="/destinations">
+          <Link to="/destinations">
             <Button size="lg">
               View All Destinations
             </Button>
