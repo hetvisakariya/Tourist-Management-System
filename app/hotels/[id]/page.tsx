@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, use } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -27,7 +27,8 @@ import {
   Info
 } from "lucide-react";
 
-export default function HotelDetailPage({ params }: { params: { id: string } }) {
+export default function HotelDetailPage(props: { params: Promise<{ id: string }> }) {
+  const params = use(props.params);
   const [checkInDate, setCheckInDate] = useState<Date | undefined>(new Date());
   const [checkOutDate, setCheckOutDate] = useState<Date | undefined>(
     new Date(new Date().setDate(new Date().getDate() + 3))

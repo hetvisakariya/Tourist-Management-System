@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
@@ -33,7 +33,8 @@ import {
   ArrowLeft
 } from "lucide-react";
 
-export default function BookingDetailPage({ params }: { params: { id: string } }) {
+export default function BookingDetailPage(props: { params: Promise<{ id: string }> }) {
+  const params = use(props.params);
   const [booking, setBooking] = useState<Booking | null>(null);
   const [loading, setLoading] = useState(true);
   const [isCancelling, setIsCancelling] = useState(false);

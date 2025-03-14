@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { Link } from "react-router-dom";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Star, Hotel } from "lucide-react";
+import Link from "next/link";
 
 export function FeaturedDestinations() {
   const destinations = [
@@ -101,7 +101,7 @@ export function FeaturedDestinations() {
                 </div>
               </CardContent>
               <CardFooter className="p-6 pt-0">
-                <Link to={`/destinations/${destination.id}`} className="w-full">
+                <Link href={`/destinations/${destination.id}`} className="w-full">
                   <Button variant="outline" className="w-full">
                     Explore
                   </Button>
@@ -112,7 +112,7 @@ export function FeaturedDestinations() {
         </div>
         
         <div className="text-center mt-10">
-          <Link to="/destinations">
+          <Link href="/destinations">
             <Button size="lg">
               View All Destinations
             </Button>
