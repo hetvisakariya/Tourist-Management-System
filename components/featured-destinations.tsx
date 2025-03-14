@@ -111,13 +111,13 @@ export function FeaturedDestinations() {
           ))}
         </div>
         
-        <div className="text-center mt-10">
+        {<div className="text-center mt-10">
           <Link href="/destinations">
             <Button size="lg">
               View All Destinations
             </Button>
           </Link>
-        </div>
+        </div>}
       </div>
     </section>
   );
