@@ -62,7 +62,15 @@ export function Destinations() {
       rating: 4.2,
       hotels: 200,
       featured: true
-    }
+    },
+    {
+      id: 8,
+      name: "Rome, Italy",
+      image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac",
+      rating: 4.6,
+      hotels: 289,
+      featured: true
+    },
   ];
 
   return (
