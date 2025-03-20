@@ -71,6 +71,22 @@ export function Destinations() {
       hotels: 289,
       featured: true
     },
+    {
+      id: 9,
+      name: "Shanghai, China",
+      image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac",
+      rating: 4.8,
+      hotels: 219,
+      featured: false
+    },
+    {
+      id: 10,
+      name: "Cairo, Egypt ",
+      image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac",
+      rating: 4.5,
+      hotels: 200,
+      featured: true
+    },
   ];
 
   return (
