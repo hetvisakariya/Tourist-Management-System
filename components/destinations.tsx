@@ -61,7 +61,7 @@ export function Destinations() {
       image: "https://images.unsplash.com/photo-1496661274775-a86a124b9df3?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       rating: 4.2,
       hotels: 200,
-      featured: true
+      featured: false
     },
     {
       id: 8,
@@ -74,20 +74,60 @@ export function Destinations() {
     {
       id: 9,
       name: "Shanghai, China",
-      image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac",
+      image: "https://unsplash.com/photos/high-angle-view-of-high-rise-buildings-D8iZPlX-2fs",
       rating: 4.8,
       hotels: 219,
       featured: false
     },
     {
       id: 10,
-      name: "Cairo, Egypt ",
+      name: "Ho chi minh city, Viatnam ",
       image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac",
+      rating: 4.9,
+      hotels: 180,
+      featured: true
+    },
+    {
+      id: 11,
+      name: "Goa, India ",
+      image: "https://unsplash.com/photos/blue-body-of-water-under-sunny-sky-bWJiSZjIgTMc",
+      rating: 4.7,
+      hotels: 251,
+      featured: true
+    },
+    {
+      id: 12,
+      name: "Bern, Switzerland ",
+      image: "https://unsplash.com/photos/blue-body-of-water-under-sunny-sky-bWJiSZjIgTMc",
+      rating: 4.9,
+      hotels: 152,
+      featured: true
+    },
+    {
+      id: 13,
+      name: "Colambo , Shrilanka",
+      image: "https://unsplash.com/photos/blue-body-of-water-under-sunny-sky-bWJiSZjIgTMc",
+      rating: 4.5,
+      hotels: 200,
+      featured: false
+    },
+    {
+      id: 14,
+      name: "Iceland, Europe ",
+      image: "https://unsplash.com/photos/northern-light-aurora-borealis-at-vestrahorn-mountains-in-stokksnes-iceland-5SxXWvzYtkg",
       rating: 4.5,
       hotels: 200,
       featured: true
     },
-  ];
+    {
+      id: 15,
+      name: "Andman Nikobar iceland , India",
+      image: "https://unsplash.com/photos/railay-beach-at-sunrise-in-krabi-thailand-s_kwq1J0nX4",
+      rating: 4.5,
+      hotels: 200,
+      featured: true
+    },
+ ];
 
   return (
     <section className="py-16">
