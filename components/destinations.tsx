@@ -116,7 +116,7 @@ export function Destinations() {
       name: "Iceland, Europe ",
       image: "https://unsplash.com/photos/northern-light-aurora-borealis-at-vestrahorn-mountains-in-stokksnes-iceland-5SxXWvzYtkg",
       rating: 4.5,
-      hotels: 200,
+      hotels: 152,
       featured: true
     },
     {
@@ -124,7 +124,7 @@ export function Destinations() {
       name: "Andman Nikobar iceland , India",
       image: "https://unsplash.com/photos/railay-beach-at-sunrise-in-krabi-thailand-s_kwq1J0nX4",
       rating: 4.5,
-      hotels: 200,
+      hotels: 252,
       featured: true
     },
  ];
