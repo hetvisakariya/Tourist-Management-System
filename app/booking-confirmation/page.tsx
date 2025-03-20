@@ -83,6 +83,10 @@ export default function BookingConfirmationPage() {
                   </div>
                 </div>
               </div>
+
+
+
+              
               
               <div className="bg-muted p-4 rounded-lg flex items-start">
                 <Mail className="h-5 w-5 mr-2 mt-0.5 text-primary" />
