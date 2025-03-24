@@ -78,6 +78,24 @@ export default function HotelsPage() {
       price: 220,
       rating: 4.7,
       amenities: ["Free WiFi", "Breakfast", "Restaurant", "Parking"]
+    },
+    {
+      id: 7,
+      name: "Rome Luxus",
+      location: "Rome,Italy",
+      image: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+      price: 370,
+      rating: 4.2,
+      amenities: ["Free WiFi", "Spa", "Restaurant", "Parking"]
+    },
+    {
+      id: 8,
+      name: "LaLa Land",
+      location: "Istanbul,Turkey",
+      image: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+      price: 125,
+      rating:4.4,
+      amenities: ["Free WiFi", "Breakfast", "Parking"]
     }
   ];
 
