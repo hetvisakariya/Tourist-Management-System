@@ -74,7 +74,7 @@ export function Destinations() {
     {
       id: 9,
       name: "Shanghai, China",
-      image: "https://unsplash.com/photos/high-angle-view-of-high-rise-buildings-D8iZPlX-2fs",
+      image: "https://images.unsplash.com/photo-1548919973-5cef591cdbc9?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       rating: 4.8,
       hotels: 219,
       featured: false
@@ -90,7 +90,7 @@ export function Destinations() {
     {
       id: 11,
       name: "Goa, India ",
-      image: "https://unsplash.com/photos/blue-body-of-water-under-sunny-sky-bWJiSZjIgTMc",
+      image: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       rating: 4.7,
       hotels: 251,
       featured: true
@@ -98,7 +98,7 @@ export function Destinations() {
     {
       id: 12,
       name: "Bern, Switzerland ",
-      image: "https://unsplash.com/photos/blue-body-of-water-under-sunny-sky-bWJiSZjIgTMc",
+      image: "https://images.unsplash.com/photo-1603978111726-42dd6fedbf67?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       rating: 4.9,
       hotels: 152,
       featured: true
@@ -106,7 +106,7 @@ export function Destinations() {
     {
       id: 13,
       name: "Colambo , Shrilanka",
-      image: "https://unsplash.com/photos/blue-body-of-water-under-sunny-sky-bWJiSZjIgTMc",
+      image: "https://images.unsplash.com/photo-1546656495-fc838de15e5c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       rating: 4.5,
       hotels: 200,
       featured: false
@@ -114,15 +114,15 @@ export function Destinations() {
     {
       id: 14,
       name: "Iceland, Europe ",
-      image: "https://unsplash.com/photos/northern-light-aurora-borealis-at-vestrahorn-mountains-in-stokksnes-iceland-5SxXWvzYtkg",
+      image: "https://images.unsplash.com/photo-1518156959312-07a5380c1261?q=80&w=2302&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       rating: 4.5,
       hotels: 152,
       featured: true
     },
     {
       id: 15,
-      name: "Andman Nikobar iceland , India",
-      image: "https://unsplash.com/photos/railay-beach-at-sunrise-in-krabi-thailand-s_kwq1J0nX4",
+      name: "Andman Nikobar , India",
+      image: "https://plus.unsplash.com/premium_photo-1661962958462-9e52fda9954d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       rating: 4.5,
       hotels: 252,
       featured: true
