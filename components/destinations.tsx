@@ -82,7 +82,7 @@ export function Destinations() {
     {
       id: 10,
       name: "Ho chi minh city, Viatnam ",
-      image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac",
+      image: "https://images.unsplash.com/photo-1580835267732-2d232d3d2655?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       rating: 4.9,
       hotels: 180,
       featured: true
