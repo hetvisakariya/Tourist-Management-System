@@ -96,8 +96,92 @@ export default function HotelsPage() {
       price: 125,
       rating:4.4,
       amenities: ["Free WiFi", "Breakfast", "Parking"]
+    },
+    {
+      id: 9,
+      name: "Beautiful Saigon Hotel",
+      location: "Ho Chi Minh",
+      image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fbeauty-saigon.en-gb.html&psig=AOvVaw1eEicg7BBlCCuJAo-sj7v5&ust=1743060343347000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLiCn_abp4wDFQAAAAAdAAAAABAE",
+      price: 125,
+      rating:4.6,
+      amenities: ["Free WiFi", "Breakfast", "Parking"]
+    },
+    {
+      id: 10,
+      name: "Golden tulip",
+      location: "Rome,Italy",
+      image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fit%2Fclubisolasacra.en-gb.html&psig=AOvVaw0Y2w8AhWeKg6VWraFroipY&ust=1743060676474000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjK7qSdp4wDFQAAAAAdAAAAABAJ",
+      price: 125,
+      rating:5.7,
+      amenities: ["Free WiFi", "Parking","spa","Brakefast","Restaurant"]
+    },
+    {
+      id: 11,
+      name: "Relais luxary",
+      location: "Rome,Italy",
+      image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.agoda.com%2Fpantheon-caesar-relais%2Fhotel%2Frome-it.html&psig=AOvVaw0X8SFFgdS9M7CGUpMkUDEe&ust=1743060779208000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOCx5s2dp4wDFQAAAAAdAAAAABAE",
+      price: 125,
+      rating:4.5,
+      amenities: ["Free WiFi", "Breakfast", "Parking"]
+    },
+    {
+      id: 12,
+      name: "Barbera Hotel",
+      location: "Istanbul,Turkey",
+      image: "https://www.google.com/imgres?q=%0D%0A%20%20%20%20%20%20name%3A%20%22Barbera%20Hotel%22%2C%0D%0A%20%20%20%20%20%20location%3A%20%22Istanbul%2CTurkey%22%2C&imgurl=https%3A%2F%2Fwww.go-istanbul-hotels.com%2Fdata%2FPhotos%2FOriginalPhoto%2F11302%2F1130209%2F1130209416.JPEG&imgrefurl=https%3A%2F%2Fwww.go-istanbul-hotels.com%2Fen%2Fproperty%2Fbarbera.html&docid=6swQ502HC_O9XM&tbnid=MgevNZjv5zfj6M&vet=12ahUKEwjOyL2Wn6eMAxXEXGwGHTeqJT0QM3oECEQQAA..i&w=1280&h=853&hcb=2&itg=1&ved=2ahUKEwjOyL2Wn6eMAxXEXGwGHTeqJT0QM3oECEQQAA",
+      price: 125,
+      rating:4.7,
+      amenities: ["Free WiFi", "Breakfast", "Parking"]
+    },
+    
+    {
+     id: 13,
+     name: "Banyan Tree Phuket",
+     location: "Phuket, Thailand",
+     imag: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/12345678.jpg?k=abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890&o=&hp=1",
+     price: 29405,
+     rating: 4.8,
+     amenities: ["Free WiFi", "Spa", "Swimming Pool"]
+    },
+    {
+        "id": 14,
+        "name": "Hotel Bellevue Palace",
+        "location": "Bern, Switzerland",
+        "image": "https://www.hotelbern.ch/images/hotel/hotel-bern.jpg",
+        "price": 350,
+        "rating": 4.7,
+        "amenities": ["Free WiFi", "Restaurant", "Fitness Center"]
+    },
+    {
+        "id": 15,
+        "name": "The Ritz-Carlton New York, Central Park",
+        "location": "New York, USA",
+        "image": "https://www.thetimes.co.uk/images/hotel/ritz-carlton-new-york.jpg",
+        "price": 1050,
+        "rating": 4.9,
+        "amenities": ["Free WiFi", "Spa", "Central Park View"]
+    },
+    {
+        "id": 16,
+        "name": "Twinpalms Bangtao Phuket Tented Resort",
+        "location": "Phuket, Thailand",
+        "image": "https://www.dailytelegraph.com.au/images/hotel/twinpalms-bangtao.jpg",
+        "price": 350,
+        "rating": 4.6,
+        "amenities": ["Free WiFi", "Private Pool", "Beach Access"]
+    },
+    {
+        "id": 17,
+        "name": "Hotel Schweizerhof Bern & Spa",
+        "location": "Bern, Switzerland",
+        "image": "https://www.myswitzerland.com/images/hotel/schweizerhof-bern.jpg",
+        "price": 400,
+        "rating": 4.8,
+        "amenities": ["Free WiFi", "Spa", "Central Location"]
     }
-  ];
+  ]
+    
+  
 
   // Filter hotels based on search query and price range
   const filteredHotels = hotels.filter(hotel => {
