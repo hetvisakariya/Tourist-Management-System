@@ -7,25 +7,16 @@ import { Globe, Users, Award, Clock, Heart, Shield } from "lucide-react";
 export default function AboutPage() {
   const teamMembers = [
     {
-      name: "Sarah Johnson",
-      role: "CEO & Founder",
+      name: "Hetvi sakariya",
+      role: "Froend developer",
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
     },
     {
       name: "Michael Chen",
-      role: "CTO",
+      role: "Backend developer",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
     },
-    {
-      name: "Emma Rodriguez",
-      role: "Head of Operations",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1361&q=80",
-    },
-    {
-      name: "David Kim",
-      role: "Marketing Director",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
-    }
+    
   ];
 
   const values = [

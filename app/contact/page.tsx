@@ -73,7 +73,7 @@ export default function ContactPage() {
                   <Mail className="h-5 w-5 mr-3 mt-0.5 text-primary" />
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-muted-foreground">support@Tourist Guide.com</p>
+                    <p className="text-muted-foreground">help@Tourist Guide.com</p>
                   </div>
                 </div>
                 
@@ -81,7 +81,7 @@ export default function ContactPage() {
                   <Phone className="h-5 w-5 mr-3 mt-0.5 text-primary" />
                   <div>
                     <p className="font-medium">Phone</p>
-                    <p className="text-muted-foreground">+1-800-TRAVEL (872-835)</p>
+                    <p className="text-muted-foreground">91+ 123652186</p>
                   </div>
                 </div>
                 
@@ -91,8 +91,8 @@ export default function ContactPage() {
                     <p className="font-medium">Address</p>
                     <p className="text-muted-foreground">
                       123 Travel Street<br />
-                      San Francisco, CA 94105<br />
-                      United States
+                     Gujrat,<br />
+                      India
                     </p>
                   </div>
                 </div>
@@ -130,7 +130,7 @@ export default function ContactPage() {
                       </label>
                       <Input
                         id="name"
-                        placeholder="John Doe"
+                        placeholder="Abc"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         required
@@ -144,7 +144,7 @@ export default function ContactPage() {
                       <Input
                         id="email"
                         type="email"
-                        placeholder="john@example.com"
+                        placeholder="123@example.com"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required

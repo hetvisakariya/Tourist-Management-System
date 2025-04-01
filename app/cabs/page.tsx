@@ -70,7 +70,7 @@ export default function CabsPage() {
     {
       id: 2,
       name: "Standard",
-      image: "https://images.unsplash.com/photo-1553423300-19dbf8a93647?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFGiBT1CICJiVwc4hgJ8jTlFLlkDRnB6L8WA&s",
       price: 25,
       capacity: 4,
       features: ["Air Conditioning", "Music System", "GPS Navigation", "Free WiFi"]
