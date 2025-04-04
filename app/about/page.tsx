@@ -9,12 +9,12 @@ export default function AboutPage() {
     {
       name: "Hetvi sakariya",
       role: "Froend developer",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
+      image: "c:\Users\HP\OneDrive\Desktop\WhatsApp Image 2025-04-03 at 10.56.36_f96f7fa0.jpg",
     },
     {
-      name: "Michael Chen",
+      name: "Palak Timbadiya",
       role: "Backend developer",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
+      image: "c:\Users\HP\OneDrive\Desktop\WhatsApp Image 2025-04-03 at 10.56.36_f96f7fa0.jpg",
     },
     
   ];
@@ -30,26 +30,7 @@ export default function AboutPage() {
       title: "Global Perspective",
       description: "We embrace diversity and bring a global mindset to everything we do."
     },
-    {
-      icon: <Award className="h-8 w-8 text-primary" />,
-      title: "Excellence",
-      description: "We strive for excellence in every service we provide."
-    },
-    {
-      icon: <Shield className="h-8 w-8 text-primary" />,
-      title: "Trust & Safety",
-      description: "We ensure the highest standards of trust and safety for our customers."
-    },
-    {
-      icon: <Clock className="h-8 w-8 text-primary" />,
-      title: "Reliability",
-      description: "We deliver on our promises and are always there when you need us."
-    },
-    {
-      icon: <Users className="h-8 w-8 text-primary" />,
-      title: "Community",
-      description: "We build meaningful connections between travelers and local communities."
-    }
+    
   ];
 
   return (
