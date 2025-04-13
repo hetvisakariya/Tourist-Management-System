@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -30,6 +30,7 @@ import {
   Search,
   Filter
 } from "lucide-react";
+import { Guide, guidesAPI } from "@/lib/api";
 
 export default function GuidesPage() {
   const [date, setDate] = useState<Date | undefined>(new Date());
@@ -37,82 +38,25 @@ export default function GuidesPage() {
   const [language, setLanguage] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const { toast } = useToast();
+  const [guides, setGuides] = useState<Guide[]>([]);
+  const [loading, setLoading] = useState(true);
+  
+  useEffect(() => {
+    const fetchHotels = async () => {
+      try {
+        const data = await guidesAPI.getAll(); // calls your API
+        setGuides(data); // adapt depending on your API shape
+      } catch (error) {
+        console.error("Error fetching hotels:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  // Mock tour guide data
-  const guides = [
-    {
-      id: 1,
-      name: "John Smith",
-      location: "Bali, Indonesia",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
-      languages: ["English", "Indonesian"],
-      experience: 5,
-      rating: 4.8,
-      reviews: 124,
-      price: 50,
-      specialties: ["Cultural Tours", "Historical Sites", "Local Cuisine"]
-    },
-    {
-      id: 2,
-      name: "Maria Rodriguez",
-      location: "Barcelona, Spain",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80",
-      languages: ["English", "Spanish", "French"],
-      experience: 8,
-      rating: 4.9,
-      reviews: 187,
-      price: 65,
-      specialties: ["Art & Museums", "Architecture", "Wine Tours"]
-    },
-    {
-      id: 3,
-      name: "Hiroshi Tanaka",
-      location: "Tokyo, Japan",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
-      languages: ["English", "Japanese"],
-      experience: 10,
-      rating: 4.7,
-      reviews: 156,
-      price: 70,
-      specialties: ["Traditional Culture", "Technology", "Food Tours"]
-    },
-    {
-      id: 4,
-      name: "Sophie Martin",
-      location: "Paris, France",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1361&q=80",
-      languages: ["English", "French", "German"],
-      experience: 7,
-      rating: 4.8,
-      reviews: 142,
-      price: 60,
-      specialties: ["Art History", "Fashion", "Hidden Gems"]
-    },
-    {
-      id: 5,
-      name: "Ahmed Hassan",
-      location: "Cairo, Egypt",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
-      languages: ["English", "Arabic", "French"],
-      experience: 12,
-      rating: 4.9,
-      reviews: 203,
-      price: 55,
-      specialties: ["Ancient History", "Archaeology", "Desert Tours"]
-    },
-    {
-      id: 6,
-      name: "Olivia Chen",
-      location: "New York, USA",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
-      languages: ["English", "Mandarin", "Spanish"],
-      experience: 6,
-      rating: 4.7,
-      reviews: 118,
-      price: 75,
-      specialties: ["Urban Exploration", "Food Tours", "Photography"]
-    }
-  ];
+    fetchHotels();
+  }, []);
+
+  if (loading) return <div>Loading Guides...</div>;
 
   // Filter guides based on search query, location, and language
   const filteredGuides = guides.filter(guide => {
@@ -254,7 +198,7 @@ export default function GuidesPage() {
             <div className="space-y-6">
               {filteredGuides.length > 0 ? (
                 filteredGuides.map((guide) => (
-                  <Card key={guide.id} className="overflow-hidden border-none shadow-md hover:shadow-lg transition-all">
+                  <Card key={guide._id} className="overflow-hidden border-none shadow-md hover:shadow-lg transition-all">
                     <div className="flex flex-col md:flex-row">
                       <div className="relative h-64 md:h-auto md:w-1/3">
                         <Image

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, use } from "react";
+import { useState, use, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -26,9 +26,12 @@ import {
   Check,
   Info
 } from "lucide-react";
+import { hotelsAPI, Hotel } from "@/lib/api";
 
 export default function HotelDetailPage(props: { params: Promise<{ id: string }> }) {
   const params = use(props.params);
+  const [hotels, setHotel] = useState<Hotel | null>(null);
+  const [loading, setLoading] = useState(true);
   const [checkInDate, setCheckInDate] = useState<Date | undefined>(new Date());
   const [checkOutDate, setCheckOutDate] = useState<Date | undefined>(
     new Date(new Date().setDate(new Date().getDate() + 3))
@@ -39,48 +42,25 @@ export default function HotelDetailPage(props: { params: Promise<{ id: string }>
   const { toast } = useToast();
 
   // Mock hotel data - in a real app, this would be fetched from an API
-  const hotel = {
-    id: parseInt(params.id),
-    name: "Grand Luxury Hotel",
-    location: "Bali, Indonesia",
-    description: "Experience luxury like never before at our 5-star resort nestled in the heart of Bali. With stunning ocean views, world-class amenities, and exceptional service, Grand Luxury Hotel offers an unforgettable stay for both leisure and business travelers.",
-    price: 120,
-    rating: 4.8,
-    reviews: 245,
-    amenities: ["Free WiFi", "Breakfast", "Restaurant", "Parking", "Swimming Pool", "Spa", "Fitness Center", "Room Service"],
-    images: [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1925&q=80",
-      "https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
-      "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
-    ],
-    rooms: [
-      {
-        id: 1,
-        name: "Deluxe Room",
-        price: 120,
-        capacity: 2,
-        description: "Spacious room with a king-sized bed, private balcony, and ocean view.",
-        amenities: ["King Bed", "Ocean View", "Private Balcony", "Air Conditioning", "Mini Bar"]
-      },
-      {
-        id: 2,
-        name: "Executive Suite",
-        price: 220,
-        capacity: 2,
-        description: "Luxurious suite with separate living area, premium amenities, and panoramic views.",
-        amenities: ["King Bed", "Separate Living Area", "Panoramic View", "Premium Toiletries", "Jacuzzi"]
-      },
-      {
-        id: 3,
-        name: "Family Room",
-        price: 180,
-        capacity: 4,
-        description: "Perfect for families with two queen beds and additional space for children.",
-        amenities: ["Two Queen Beds", "Extra Space", "Family-friendly", "Garden View", "Connecting Rooms Available"]
+  useEffect(() => {
+    if (!params.id) return;
+
+    const fetchHotel = async () => {
+      try {
+        const data = await hotelsAPI.getById(params.id as string);
+        setHotel(data.hotel || data);
+      } catch (error) {
+        console.error("Error fetching hotel:", error);
+      } finally {
+        setLoading(false);
       }
-    ]
-  };
+    };
+
+    fetchHotel();
+  }, [params.id]);
+
+  if (loading) return <div>Loading hotel...</div>;
+  if (!hotels) return <div>Hotel not found</div>;
 
   const getAmenityIcon = (amenity: string) => {
     switch (amenity) {
@@ -110,7 +90,7 @@ export default function HotelDetailPage(props: { params: Promise<{ id: string }>
     // In a real app, this would navigate to a booking confirmation page or process the booking
     toast({
       title: "Booking Successful!",
-      description: `Your stay at ${hotel.name} has been booked.`,
+      description: `Your stay at ${hotels.name} has been booked.`,
     });
     
     // Navigate to a confirmation page
@@ -124,7 +104,7 @@ export default function HotelDetailPage(props: { params: Promise<{ id: string }>
       (checkOutDate.getTime() - checkInDate.getTime()) / (1000 * 60 * 60 * 24)
     );
     
-    return hotel.price * nights * parseInt(rooms);
+    return hotels.price * nights * parseInt(rooms);
   };
 
   return (
@@ -134,17 +114,17 @@ export default function HotelDetailPage(props: { params: Promise<{ id: string }>
         <div className="flex flex-col md:flex-row gap-8">
           {/* Main Content */}
           <div className="w-full md:w-2/3">
-            <h1 className="text-3xl font-bold mb-2">{hotel.name}</h1>
+            <h1 className="text-3xl font-bold mb-2">{hotels.name}</h1>
             
             <div className="flex items-center mb-4">
               <div className="flex items-center mr-4">
                 <MapPin className="h-4 w-4 mr-1 text-muted-foreground" />
-                <span className="text-muted-foreground">{hotel.location}</span>
+                <span className="text-muted-foreground">{hotels.location}</span>
               </div>
               <div className="flex items-center">
                 <Star className="h-4 w-4 fill-yellow-400 text-yellow-400 mr-1" />
-                <span className="mr-1">{hotel.rating}</span>
-                <span className="text-muted-foreground">({hotel.reviews} reviews)</span>
+                <span className="mr-1">{hotels.rating}</span>
+                <span className="text-muted-foreground">({hotels.reviews} reviews)</span>
               </div>
             </div>
             
@@ -152,17 +132,17 @@ export default function HotelDetailPage(props: { params: Promise<{ id: string }>
             <div className="grid grid-cols-2 gap-4 mb-8">
               <div className="col-span-2 relative h-80 rounded-lg overflow-hidden">
                 <Image
-                  src={hotel.images[0]}
-                  alt={hotel.name}
+                  src={hotels.images[0]}
+                  alt={hotels.name}
                   fill
                   style={{ objectFit: "cover" }}
                 />
               </div>
-              {hotel.images.slice(1, 4).map((image, index) => (
+              {hotels.images.slice(1, 4).map((image, index) => (
                 <div key={index} className="relative h-40 rounded-lg overflow-hidden">
                   <Image
                     src={image}
-                    alt={`${hotel.name} - Image ${index + 2}`}
+                    alt={`${hotels.name} - Image ${index + 2}`}
                     fill
                     style={{ objectFit: "cover" }}
                   />
@@ -180,7 +160,7 @@ export default function HotelDetailPage(props: { params: Promise<{ id: string }>
               
               <TabsContent value="overview" className="mt-4">
                 <h2 className="text-xl font-semibold mb-2">About this hotel</h2>
-                <p className="text-muted-foreground mb-4">{hotel.description}</p>
+                <p className="text-muted-foreground mb-4">{hotels.description}</p>
                 
                 <h3 className="text-lg font-semibold mb-2">Location</h3>
                 <p className="text-muted-foreground mb-4">
@@ -200,7 +180,7 @@ export default function HotelDetailPage(props: { params: Promise<{ id: string }>
                 <h2 className="text-xl font-semibold mb-4">Available Room Types</h2>
                 
                 <div className="space-y-4">
-                  {hotel.rooms.map((room) => (
+                  {hotels.rooms.map((room) => (
                     <Card key={room.id} className="overflow-hidden">
                       <div className="flex flex-col md:flex-row">
                         <div className="p-4 md:w-2/3">
@@ -233,7 +213,7 @@ export default function HotelDetailPage(props: { params: Promise<{ id: string }>
                 <h2 className="text-xl font-semibold mb-4">Hotel Amenities</h2>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {hotel.amenities.map((amenity, index) => (
+                  {hotels.amenities.map((amenity, index) => (
                     <div key={index} className="flex items-center">
                       {getAmenityIcon(amenity)}
                       <span className="ml-2">{amenity}</span>
@@ -340,7 +320,7 @@ export default function HotelDetailPage(props: { params: Promise<{ id: string }>
                   <div className="border-t border-border pt-4 mt-4">
                     <div className="flex justify-between mb-2">
                       <span>Price per night</span>
-                      <span>${hotel.price}</span>
+                      <span>${hotels.price}</span>
                     </div>
                     {checkInDate && checkOutDate && (
                       <div className="flex justify-between mb-2">
@@ -350,7 +330,7 @@ export default function HotelDetailPage(props: { params: Promise<{ id: string }>
                           )} nights
                         </span>
                         <span>
-                          ${hotel.price} x {Math.ceil(
+                          ${hotels.price} x {Math.ceil(
                             (checkOutDate.getTime() - checkInDate.getTime()) / (1000 * 60 * 60 * 24)
                           )} x {rooms}
                         </span>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -31,6 +31,7 @@ import {
   Snowflake,
   Briefcase
 } from "lucide-react";
+import { Cab, cabsAPI } from "@/lib/api";
 
 export default function CabsPage() {
   const [date, setDate] = useState<Date | undefined>(new Date());
@@ -40,6 +41,25 @@ export default function CabsPage() {
   const [time, setTime] = useState("");
   const [passengers, setPassengers] = useState("");
   const { toast } = useToast();
+  const [cabs, setCabs] = useState<Cab[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchHotels = async () => {
+      try {
+        const data = await cabsAPI.getAll(); // calls your API
+        setCabs(data); // adapt depending on your API shape
+      } catch (error) {
+        console.error("Error fetching hotels:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchHotels();
+  }, []);
+
+  if (loading) return <div>Loading Cabs...</div>;
 
   const handleBookCab = () => {
     if (!pickupLocation || !dropoffLocation || !date || !time || !cabType || !passengers) {
@@ -243,8 +263,8 @@ export default function CabsPage() {
             <h2 className="text-2xl font-semibold mb-6">Available Cab Types</h2>
             
             <div className="space-y-6">
-              {cabTypes.map((cab) => (
-                <Card key={cab.id} className="overflow-hidden">
+              {cabs.map((cab) => (
+                <Card key={cab._id} className="overflow-hidden">
                   <div className="flex flex-col md:flex-row">
                     <div className="relative h-48 md:h-auto md:w-1/3">
                       <Image
