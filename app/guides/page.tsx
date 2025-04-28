@@ -68,7 +68,7 @@ export default function GuidesPage() {
     return matchesSearch && matchesLocation && matchesLanguage;
   });
 
-  const handleBookGuide = (guideId: number) => {
+  const handleBookGuide = (guideId: string | number) => {
     if (!date) {
       toast({
         title: "Please select a date",
@@ -78,7 +78,7 @@ export default function GuidesPage() {
       return;
     }
 
-    const guide = guides.find(g => g.id === guideId);
+    const guide = guides.find(g => g._id === guideId);
     
     toast({
       title: "Guide Booking Successful!",
@@ -246,7 +246,7 @@ export default function GuidesPage() {
                             <DollarSign className="h-5 w-5 inline-block" />
                             {guide.price} <span className="text-sm font-normal text-muted-foreground">/ hour</span>
                           </div>
-                          <Button onClick={() => handleBookGuide(guide.id)}>
+                          <Button onClick={() => handleBookGuide(guide._id)}>
                             Book Guide
                           </Button>
                         </div>

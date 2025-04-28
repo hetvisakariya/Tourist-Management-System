@@ -41,7 +41,7 @@ export interface Cab {
 }
 
 export interface Guide {
-  _id: string;
+  _id: string | number;
   name: string;
   location: string;
   image: string;
