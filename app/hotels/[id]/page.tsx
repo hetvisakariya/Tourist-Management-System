@@ -14,7 +14,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { format } from "date-fns";
-import { 
+import {
   MapPin, 
   Star, 
   Wifi, 
@@ -181,7 +181,7 @@ export default function HotelDetailPage(props: { params: Promise<{ id: string }>
                 
                 <div className="space-y-4">
                   {hotels.rooms.map((room) => (
-                    <Card key={room.id} className="overflow-hidden">
+                    <Card key={room._id} className="overflow-hidden">
                       <div className="flex flex-col md:flex-row">
                         <div className="p-4 md:w-2/3">
                           <h3 className="text-lg font-semibold mb-1">{room.name}</h3>
